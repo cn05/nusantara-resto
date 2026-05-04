@@ -1,0 +1,13 @@
+[build]
+  command = "pnpm build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Untuk SPA routing (aman meski hanya pakai anchor #)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
